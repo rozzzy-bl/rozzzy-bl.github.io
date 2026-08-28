@@ -1,12 +1,1129 @@
-<html>
-    <body>
-        <p> header </p>
-        <p> experiencia laboral</p>
-        <p> Educacion </p>
-        <p> Habilidades </p>
-        <p> Certificaciones </p>
-        
-        <p> Idiomas </p>
-        <p> Intereses </p>
-    </body>
-</html>   
+  <!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CV | Rosiely Martínez Bandala</title>
+
+    <style>
+
+        /* ==============================
+           CONFIGURACIÓN GENERAL
+        ============================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fceff5;
+            color: #333;
+            padding: 30px;
+        }
+
+
+        /* ==============================
+           CURRÍCULUM
+        ============================== */
+
+        .cv {
+            width: 900px;
+            max-width: 100%;
+            margin: auto;
+            background: white;
+            box-shadow: 0 8px 30px rgba(180, 120, 145, 0.20);
+        }
+
+
+        /* ==============================
+           ENCABEZADO
+        ============================== */
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 28px 35px;
+
+            border-bottom: 3px solid #e9a9bf;
+        }
+
+
+        /* FOTO CIRCULAR */
+
+        .foto {
+            width: 125px;
+            height: 125px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 5px solid #f3c5d5;
+
+            flex-shrink: 0;
+        }
+
+
+        /* NOMBRE */
+
+        .nombre {
+            flex: 1;
+        }
+
+        .nombre h1 {
+            font-size: 29px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .nombre h2 {
+            font-size: 15px;
+            color: #d783a2;
+            margin-bottom: 10px;
+        }
+
+        .nombre p {
+            font-size: 10px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+
+        /* ==============================
+           CONTACTO
+        ============================== */
+
+        .contacto {
+            width: 220px;
+            font-size: 10px;
+            line-height: 1.8;
+        }
+
+        .contacto div {
+            margin-bottom: 4px;
+        }
+
+        .icono {
+            color: #d783a2;
+            font-weight: bold;
+            margin-right: 6px;
+        }
+
+
+        /* ==============================
+           CUERPO
+        ============================== */
+
+        .contenido {
+            display: grid;
+            grid-template-columns: 55% 45%;
+        }
+
+        .izquierda {
+            padding: 25px 30px 35px 40px;
+            border-right: 1px solid #f0dce4;
+        }
+
+        .derecha {
+            padding: 25px 35px 35px 30px;
+        }
+
+
+        /* ==============================
+           TÍTULOS
+        ============================== */
+
+        .titulo {
+            font-size: 17px;
+            color: #333;
+
+            margin-bottom: 17px;
+            padding-bottom: 7px;
+
+            border-bottom: 1px solid #ead4dc;
+        }
+
+        .titulo::after {
+            content: "";
+            display: block;
+
+            width: 45px;
+            height: 3px;
+
+            background: #e9a9bf;
+
+            margin-top: 5px;
+        }
+
+
+        /* ==============================
+           SECCIONES
+        ============================== */
+
+        .seccion {
+            margin-bottom: 28px;
+        }
+
+
+        /* ==============================
+           VIÑETAS CIRCULARES
+        ============================== */
+
+        .item {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 22px;
+        }
+
+        .item::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 4px;
+
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: #e9a9bf;
+
+            border: 2px solid #f8dce6;
+        }
+
+
+        /* ==============================
+           EXPERIENCIA / EDUCACIÓN
+        ============================== */
+
+        .fecha {
+            font-size: 9px;
+            color: #d783a2;
+
+            margin-bottom: 4px;
+
+            text-transform: uppercase;
+        }
+
+        .item h3 {
+            font-size: 13px;
+            color: #333;
+
+            margin-bottom: 4px;
+        }
+
+        .subtitulo {
+            font-size: 10px;
+            font-weight: bold;
+
+            color: #777;
+
+            margin-bottom: 7px;
+        }
+
+        .item p {
+            font-size: 10px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+
+        /* ==============================
+           EDUCACIÓN
+        ============================== */
+
+        .educacion {
+            position: relative;
+
+            padding-left: 22px;
+
+            margin-bottom: 20px;
+        }
+
+        .educacion::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 4px;
+
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: #e9a9bf;
+
+            border: 2px solid #f8dce6;
+        }
+
+        .educacion h3 {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .educacion p {
+            font-size: 10px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+
+        /* ==============================
+           HABILIDADES
+        ============================== */
+
+        .habilidad {
+            display: flex;
+
+            align-items: center;
+
+            margin-bottom: 14px;
+        }
+
+        .habilidad span {
+            width: 140px;
+
+            font-size: 10px;
+
+            color: #444;
+        }
+
+
+        /* BARRA */
+
+        .barra {
+            height: 9px;
+
+            flex: 1;
+
+            background: #f5e6ec;
+
+            border-radius: 2px;
+
+            overflow: hidden;
+        }
+
+        .nivel {
+            height: 100%;
+
+            background: #e9a9bf;
+
+            border-radius: 2px;
+        }
+
+
+        /* NIVELES */
+
+        .excelente {
+            width: 95%;
+        }
+
+        .muy-bueno {
+            width: 85%;
+        }
+
+        .bueno {
+            width: 75%;
+        }
+
+        .basico {
+            width: 55%;
+        }
+
+
+        /* ==============================
+           LOGROS
+        ============================== */
+
+        .logro {
+
+            position: relative;
+
+            padding-left: 20px;
+
+            margin-bottom: 16px;
+        }
+
+        .logro::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 4px;
+
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #e9a9bf;
+        }
+
+        .logro h3 {
+            font-size: 11px;
+            margin-bottom: 4px;
+        }
+
+        .logro p {
+            font-size: 9px;
+            line-height: 1.5;
+            color: #666;
+        }
+
+
+        /* ==============================
+           IDIOMAS
+        ============================== */
+
+        .idioma {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            font-size: 10px;
+
+            margin-bottom: 12px;
+
+            padding-bottom: 7px;
+
+            border-bottom: 1px dotted #e6ccd6;
+        }
+
+        .idioma strong {
+            color: #d783a2;
+        }
+
+
+        /* ==============================
+           INTERESES
+        ============================== */
+
+        .intereses {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .intereses span {
+
+            font-size: 9px;
+
+            background: #fceaf1;
+
+            color: #b96888;
+
+            padding: 6px 9px;
+
+            border-radius: 15px;
+        }
+
+
+        /* ==============================
+           INFORMACIÓN PERSONAL
+        ============================== */
+
+        .dato {
+
+            display: flex;
+
+            align-items: center;
+
+            margin-bottom: 10px;
+
+            font-size: 10px;
+        }
+
+        .dato::before {
+
+            content: "●";
+
+            color: #e9a9bf;
+
+            font-size: 8px;
+
+            margin-right: 8px;
+        }
+
+
+        /* ==============================
+           PIE DE PÁGINA
+        ============================== */
+
+        .footer {
+
+            text-align: center;
+
+            padding: 15px;
+
+            border-top: 1px solid #f0dce4;
+
+            color: #c4879e;
+
+            font-size: 9px;
+        }
+
+
+        /* ==============================
+           RESPONSIVE PARA CELULAR
+        ============================== */
+
+        @media (max-width: 750px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .header {
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 25px 20px;
+            }
+
+            .foto {
+
+                width: 130px;
+                height: 130px;
+
+                margin-bottom: 5px;
+            }
+
+            .nombre p {
+
+                max-width: 100%;
+            }
+
+            .contacto {
+
+                width: 100%;
+
+                margin-top: 10px;
+            }
+
+            .contenido {
+
+                grid-template-columns: 1fr;
+            }
+
+            .izquierda {
+
+                border-right: none;
+
+                border-bottom: 1px solid #f0dce4;
+
+                padding: 25px;
+            }
+
+            .derecha {
+
+                padding: 25px;
+            }
+
+            .habilidad span {
+
+                width: 125px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="cv">
+
+
+    <!-- ==================================
+         ENCABEZADO
+    =================================== -->
+
+    <header class="header">
+
+
+        <!-- FOTO -->
+
+        <img
+            src="IMG_0002.jpeg"
+            alt="Foto de Rosiely Martínez Bandala"
+            class="foto"
+        >
+
+
+        <!-- NOMBRE Y PERFIL -->
+
+        <div class="nombre">
+
+            <h1>Rosiely Martínez Bandala</h1>
+
+            <h2>Estudiante de Ingeniería de Software</h2>
+
+            <p>
+
+                Estudiante de Ingeniería de Software con interés
+                en la tecnología, la programación y el desarrollo
+                de soluciones creativas. Me considero una persona
+                creativa, amable, empática y comprensiva, con
+                disposición para aprender y trabajar en equipo.
+
+            </p>
+
+        </div>
+
+
+        <!-- CONTACTO -->
+
+        <div class="contacto">
+
+            <div>
+                <span class="icono">✉</span>
+                Rosiely12555@gmail.com
+            </div>
+
+            <div>
+                <span class="icono">☎</span>
+                272 334 0843
+            </div>
+
+            <div>
+                <span class="icono">⌖</span>
+                Orizaba, Veracruz, México
+            </div>
+
+            <div>
+                <span class="icono">◎</span>
+                @Rozzzy.bl
+            </div>
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- ==================================
+         CONTENIDO
+    =================================== -->
+
+    <main class="contenido">
+
+
+        <!-- ==================================
+             COLUMNA IZQUIERDA
+        =================================== -->
+
+        <section class="izquierda">
+
+
+            <!-- PERFIL -->
+
+            <div class="seccion">
+
+                <h2 class="titulo">
+                    Perfil
+                </h2>
+
+                <div class="item">
+
+                    <p>
+
+                        Estudiante de Ingeniería de Software
+                        interesada en desarrollar conocimientos
+                        y habilidades dentro del área tecnológica.
+                        Me interesa aprender, crear y participar
+                        en proyectos que permitan desarrollar
+                        soluciones innovadoras.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EXPERIENCIA -->
+
+            <div class="seccion">
+
+                <h2 class="titulo">
+                    Experiencia
+                </h2>
+
+
+                <div class="item">
+
+                    <div class="fecha">
+                        ACTUALMENTE
+                    </div>
+
+                    <h3>
+                        Estudiante de Ingeniería de Software
+                    </h3>
+
+                    <div class="subtitulo">
+                        Universidad Veracruzana
+                    </div>
+
+                    <p>
+
+                        Formación académica enfocada en el área
+                        de Ingeniería de Software, tecnología,
+                        herramientas digitales y desarrollo
+                        de habilidades para el trabajo profesional.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- EDUCACIÓN -->
+
+            <div class="seccion">
+
+                <h2 class="titulo">
+                    Educación
+                </h2>
+
+
+                <div class="educacion">
+
+                    <h3>
+                        Licenciatura en Ingeniería de Software
+                    </h3>
+
+                    <p>
+                        Universidad Veracruzana
+                    </p>
+
+                    <p>
+                        Actualmente cursando
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- OBJETIVO PROFESIONAL -->
+
+            <div class="seccion">
+
+                <h2 class="titulo">
+                    Objetivo profesional
+                </h2>
+
+
+                <div class="item">
+
+                    <p>
+
+                        Ser licenciada en Ingeniería de Software
+                        y desarrollarme profesionalmente en el
+                        área de tecnología y programación,
+                        adquiriendo experiencia y conocimientos
+                        que me permitan crear soluciones útiles
+                        y creativas.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CUALIDADES -->
+
+            <div class="seccion">
+
+                <h2 class="titulo">
+                    Cualidades
+                </h2>
+
+
+                <div class="item">
+
+                    <p>
+
+                        Creativa, amable, empática y comprensiva.
+                        Me interesa mantener una buena comunicación
+                        con las personas y colaborar de manera
+                        positiva en equipos de trabajo.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================
+             COLUMNA DERECHA
+        =================================== -->
+
+        <section class="derecha">
+
+
+            <!-- HABILIDADES -->
+
+            <div class="seccion">
+
+                <h2 class="titulo">
+                    Habilidades y competencias
+                </h2>
+
+
+                <div class="habilidad">
+
+                    <span>
+                        Creatividad
+                    </span>
+
+                    <div class="barra">
+
+                        <div class="nivel excelente"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="habilidad">
+
+                    <span>
+                        Comunicación
+                    </span>
+
+                    <div class="barra">
+
+                        <div class="nivel muy-bueno"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="habilidad">
+
+                    <span>
+                        Trabajo en equipo
+                    </span>
+
+                    <div class="barra">
+
+                        <div class="nivel muy-bueno"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="habilidad">
+
+                    <span>
+                        Empatía
+                    </span>
+
+                    <div class="barra">
+
+                        <div class="nivel excelente"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="habilidad">
+
+                    <span>
+                        Comprensión
+                    </span>
+
+                    <div class="barra">
+
+                        <div class="nivel excelente"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="habilidad">
+
+                    <span>
+                        Microsoft Word
+                    </span>
+
+                    <div class="barra">
+
+                        <div class="nivel bueno"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="habilidad">
+
+                    <span>
+                        PowerPoint
+                    </span>
+
+                    <div class="barra">
+
+                        <div class="nivel muy-bueno"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="habilidad">
+
+                    <span>
+                        Canva
+                    </span>
+
+                    <div class="barra">
+
+                        <div class="nivel excelente"></div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- LOGROS -->
+
+            <div class="seccion">
+
+                <h2 class="titulo">
+                    Logros y certificados
+                </h2>
+
+
+                <div class="logro">
+
+                    <h3>
+                        Formación universitaria
+                    </h3>
+
+                    <p>
+
+                        Actualmente cursando la Licenciatura
+                        en Ingeniería de Software en la
+                        Universidad Veracruzana.
+
+                    </p>
+
+                </div>
+
+
+                <div class="logro">
+
+                    <h3>
+                        Manejo de herramientas digitales
+                    </h3>
+
+                    <p>
+
+                        Conocimientos en Microsoft Word,
+                        PowerPoint y Canva.
+
+                    </p>
+
+                </div>
+
+
+                <div class="logro">
+
+                    <h3>
+                        Desarrollo personal
+                    </h3>
+
+                    <p>
+
+                        Interés constante por aprender nuevas
+                        habilidades relacionadas con tecnología,
+                        creatividad y comunicación.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- IDIOMAS -->
+
+            <div class="seccion">
+
+                <h2 class="titulo">
+                    Idiomas
+                </h2>
+
+
+                <div class="idioma">
+
+                    <span>
+                        Español
+                    </span>
+
+                    <strong>
+                        Nativo
+                    </strong>
+
+                </div>
+
+
+                <div class="idioma">
+
+                    <span>
+                        Inglés
+                    </span>
+
+                    <strong>
+                        Básico
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- INFORMACIÓN PERSONAL -->
+
+            <div class="seccion">
+
+                <h2 class="titulo">
+                    Información
+                </h2>
+
+
+                <div class="dato">
+                    18 años
+                </div>
+
+
+                <div class="dato">
+                    Orizaba, Veracruz
+                </div>
+
+
+                <div class="dato">
+                    Ingeniería de Software
+                </div>
+
+
+            </div>
+
+
+
+            <!-- INTERESES -->
+
+            <div class="seccion">
+
+                <h2 class="titulo">
+                    Intereses
+                </h2>
+
+
+                <div class="intereses">
+
+                    <span>
+                        Música
+                    </span>
+
+                    <span>
+                        Fotografía
+                    </span>
+
+                    <span>
+                        Baile
+                    </span>
+
+                    <span>
+                        Tecnología
+                    </span>
+
+                    <span>
+                        Programación
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================
+         PIE DE PÁGINA
+    =================================== -->
+
+    <div class="footer">
+
+        Rosiely Martínez Bandala · Ingeniería de Software
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html> 
